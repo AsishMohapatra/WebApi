@@ -12,9 +12,9 @@ namespace CityInfoApi.Model
 
         public string Description { get; set; }
 
-        public int NumberOfPointOfInterest { get { return PointOfInterests.Length; } }
+        public int NumberOfPointOfInterest { get { return PointOfInterests.Count; } }
 
-        public PointOfInterest[] PointOfInterests { get; set; } = new List<PointOfInterest>().ToArray();
+        public ICollection<PointOfInterest> PointOfInterests { get; set; } = new List<PointOfInterest>().ToArray();
     }
 
     public class PointOfInterest

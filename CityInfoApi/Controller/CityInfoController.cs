@@ -8,14 +8,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CityInfoApi.Controller
 {
-    [Route("api/[controller]")]
+    [Route("api/CityInfo")]
     [ApiController]
     public class CityInfoController : ControllerBase
     {
         [HttpGet]
-        public JsonResult GetCities()
+        public IActionResult GetCities()
         {
-            return new JsonResult(CityDataStore.Current.Cities);
+            return Ok(CityDataStore.Current.Cities);
         }
 
         [HttpGet("{id}")]
